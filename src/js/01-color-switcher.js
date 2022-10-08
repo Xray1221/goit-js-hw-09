@@ -14,9 +14,11 @@ let inteval = null;
 function start(event) {
     inteval = setInterval(() => {
         refs.body.style.backgroundColor = getRandomHexColor();
+        refs.btnStart.disabled = true;
     }, 1000)
 };
 
 function stop(event) {
     clearInterval(inteval);
+    refs.btnStart.disabled = false;
 };

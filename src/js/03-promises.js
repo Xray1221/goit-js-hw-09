@@ -11,10 +11,10 @@ refs.submitBtn.addEventListener('click', onSubmit);
 
 function onSubmit(event){
   event.preventDefault();
-  const amount = +refs.amount.value;
+  const number = +refs.amount.value;
   const delay = +refs.delay.value;
   const step = +refs.step.value;
-  for(let i = 0; i < amount; i++){
+  for(let i = 0; i < number; i++){
     createPromise(i + 1, delay + (i * step)).then(({ position, delay }) => {
       Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
     })
